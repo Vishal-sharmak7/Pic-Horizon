@@ -1,10 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root{
+    --main-color:black;
+    --secondary-color:white;
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
-   
+    background-color:var(--main-color);
+}
 
+#icon{
+    width: 30px;
+    cursor: pointer;
+    margin-left: 60rem;
+}
+.dark-theme{
+    --main-color:rgb(0, 0, 0);
+    --secondary-color:white;
+}
+.light-theme{
+    --main-color:rgb(255, 255, 255);
+    --secondary-color:rgb(0, 0, 0);
 }
 
 input{
@@ -13,28 +33,33 @@ input{
 .container{
     width: 100%;
     text-align: center;
+    padding: 40px;
 }
 h1{
-    font-weight: normal;
-    font-size: 35px;
+    font-family: "Bebas Neue", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 7rem;
     position: relative;
     margin: 40px 0;
+    color: var(--secondary-color);
 }
 
 .top-content{
-    background-color: rgb(255, 255, 255);
+    
     width: 90%;
     margin: 0 auto 20px auto;
     height: 60px;
     display: flex;
     align-items: center;
-    box-shadow: 3px 3px 3px rgb(255, 255, 255);
+    border-radius: 16px;
 }
 
 label{
+    font-family: "Bebas Neue", serif;
     display: inline-block;
     height: 100%;
-    margin: 0 20px;
+    margin: 0 17px;
     line-height: 60px;
     font-size: 20px;
     color: gray;
@@ -44,31 +69,27 @@ label{
 
 }
 label:hover{
-    color: black;
+    color: rgb(255, 0, 0);
 
 }
 .Photo-gallery{
-    width: 90%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap:20px;
-}
 
-.nature{
-    position: relative;
-    height: 380px;
-    border-radius: 10px;
-    box-shadow: 3px 3px 5px lightgray;
-    cursor: pointer;
-    transition: .5s;
+    column-count: 3;
+    max-width: 100%;
 }
 
 .nature img{
     width:100%;
-    height: 100%;
     border-radius: 10px;
-    transition: .5s;
+    margin-bottom: 10px;
+    box-shadow: 2px 2px 2px rgba(224, 222, 222, 0.269);
+    transition: all ease 1s; 
+    overflow: hidden;
+}
+
+.nature:hover img{
+    opacity: 80%;
+    scale: 0.9;
 }
 
 #check1:checked ~.container .Photo-gallery .nature{
@@ -118,3 +139,35 @@ label:hover{
     position: absolute;
     transition: .0s;
 }
+
+
+footer {
+    font-family: "Bebas Neue", serif;
+    background-color: var(--main-color);
+    color:  var(--secondary-color);
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+}
+footer p{
+    font-family: "Bebas Neue", serif;
+    font-size:1rem;
+}
+
+.footer-links a {
+    font-family: "Bebas Neue", serif;
+    font-size:2rem;
+    color:  var(--secondary-color);
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>PicHorizon</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,13 +13,13 @@
     <input type="radio" name="Photo" id="check4" >
 
     <div class="container">
-        <h1>IMAGE GALLERY</h1>
+        <h1>PIC HORIZON</h1>
         <div class="top-content">
-            
             <label for="check1">All Phtotos</label>
             <label for="check2">Emoji</label>
             <label for="check3">Cars</label>
             <label for="check4">Places</label>
+            <img src="image/moon.png" alt="" id="icon">
         </div>
         <div class="Photo-gallery">
             <div class="nature emoji">
@@ -63,7 +63,26 @@
 
         </div>
     </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-links">
+                <a href="#">PIC HORIZON</a>
+            </div>
+            <p>&copy; 2025 Image Gallery. All rights reserved.</p>
+        </div>
+    </footer>
     
+    <script>
+        var icon = document.getElementById("icon");
+        icon.onclick = function(){
+            document.body.classList.toggle("light-theme");
+            if(document.body.classList.contains("light-theme")){
+                icon.src ="image/moon.png"; 
+            }else{
+                icon.src="image/sun.png";
+            }
+        }
+    </script>
     
 </body>
 </html>
